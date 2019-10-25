@@ -1,4 +1,4 @@
-/* Query Approach */
+/* JQuery Approach */
 
 jQuery(document).ready(function($){	
 	$.get("http://rvb.test/wp-json/wp/v2/posts/?per_page=12", function (posts) {
