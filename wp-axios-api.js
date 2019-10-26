@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
 
 /* Axios Approach 
 Make it sure you add the Axios on your themes
-wp_enqueue_script( 'axious-scripts',  get_stylesheet_directory_uri() . '/js/api.js', array(), $the_theme->get( 'Version' ), true);
+wp_enqueue_script( 'axious-scripts',  get_stylesheet_directory_uri() . '/js/api.js');
 wp_enqueue_script( 'axios', 'https://unpkg.com/axios/dist/axios.min.js' );
 */
 
