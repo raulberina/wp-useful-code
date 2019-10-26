@@ -41,3 +41,5 @@ function displayData() {
         document.getElementById('res').innerHTML = restAPI;
     })
 }
+
+displayData(); 
