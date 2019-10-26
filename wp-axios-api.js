@@ -2,7 +2,9 @@
 A simple code for Wordpress REST API, get using jquery or Axios and display the result on html element.
 */
 
-/* JQuery Approach */
+/* JQuery Approach 
+   This part should be added on your themes javascript
+*/
 
 jQuery(document).ready(function($){	
 	$.get("http://rvb.test/wp-json/wp/v2/posts/?per_page=12", function (posts) {
