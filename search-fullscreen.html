@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Full Screen Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+        var $searchCntn = $( '#fullscreensearch' ),
+            $searchInput = $('input.search-input'),
+            $searchAutoComplete = $('span.algolia-autocomplete');
+        $('header .search i.fa-search').on('click', function(e) {
+            $searchCntn.toggleClass( 'open' );
+            $searchInput.focus();
+        });
+        $('#fullscreensearch .closesearch').on('click', function(e) {
+            $searchCntn.toggleClass( 'open' );
+            $searchAutoComplete.hide();
+        });
+        
+    });
+    </script>
+
+    <style>
+    body {
+        background-color: rgba(0, 0, 0, 0.5);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #fullscreensearch { 
+        position: fixed; 
+        top: 0; left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: #fff; 
+        transition: all .5s ease-in-out; 
+        -webkit-transform: translate(0px,-100%) scale(0,0); 
+        -moz-transform: translate(0px,-100%) scale(0,0); 
+        -o-transform: translate(0px,-100%) scale(0,0); 
+        -ms-transform: translate(0px,-100%) scale(0,0); 
+        transform: translate(0px,-100%) scale(0,0); 
+        opacity: 0; 
+    }
+    #fullscreensearch.open { 
+        -webkit-transform: translate(0px,0px) scale(1,1); 
+        -moz-transform: translate(0px,0px) scale(1,1); 
+        -o-transform: translate(0px,0px) scale(1,1); 
+        -ms-transform: translate(0px,0px) scale(1,1); 
+        transform: translate(0px,0px) scale(1,1); 
+        opacity: 1;     
+        z-index: 999999 !important; 
+    }
+    #fullscreensearch .closesearch { text-decoration: none; position: fixed; top: 15px; right: 15px; color: #999; border: 1px solid #dfdfdf; opacity: 1; padding: 15px 15px 12px; font-size: 27px; }
+    #fullscreensearch form { float: right; padding: 0px 0 0 0; }
+    #fullscreensearch .searchsubmit { display: none; }
+    #fullscreensearch .search-input { border: none; background: transparent; cursor: pointer; color: #999; height: 80px; font-size: 60px; position: absolute; top: 100px; left: 0; text-align: center; width: 90%; margin: 0 5%; outline: none; }
+    #fullscreensearch .closesearch:hover { cursor: pointer; background: #999; color: white; }
+
+    .white {
+        color: white;
+    }
+
+
+    </style>
+</head>
+<body>  
+        <header>
+        <div class="search">
+				<i class="fas fa-search white"></i>
+				<i class="fas fa-bars white"></i>
+        </div>
+            
+        <div id="fullscreensearch" class="">
+                <div class="closesearch">X</div>
+                <form action="/" method="GET">
+                    <input type="text" value="" placeholder="Search..." name="s" class="s search-input" autocomplete="off">
+                </form>
+        </div>
+        </header>
+
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
+</body>
+</html>
