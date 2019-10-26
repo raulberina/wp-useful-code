@@ -1,5 +1,6 @@
 /* Automatically set the featured image by grabbing the first image of the post. 
    Add the code on youn functions.php themes.
+   Source: https://www.isitwp.com/automatically-set-the-featured-image/
 */
 
 <?php
