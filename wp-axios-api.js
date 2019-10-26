@@ -4,6 +4,8 @@ A simple code for Wordpress REST API, get using jquery or Axios and display the 
 
 /* JQuery Approach 
    This part should be added on your themes javascript
+   You can change the link into your own URL "http://your-link/wp-json/wp/v2/posts/?per_page=12"
+   Display 12 posts
 */
 
 jQuery(document).ready(function($){	
